@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
 })
 export class BodyComponent {
 
+  mshow = true;
+
+  sentence: any = {
+    message: 'a great power requires a great responsibility',
+    author: 'Ben Parker',
+  };
+
+  characters: string[] = ['Spiderman', 'Venon', 'Dr. Octopus', 'Increibles']
+
 }
