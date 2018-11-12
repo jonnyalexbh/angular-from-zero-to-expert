@@ -1,6 +1,12 @@
 <h1>Search <small>{{ term }}</small></h1>
 <hr>
 
+<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">There are no results with the term: {{ term }}</div>
+  </div>
+</div>
+
 <div class="card-columns">
 
   <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
