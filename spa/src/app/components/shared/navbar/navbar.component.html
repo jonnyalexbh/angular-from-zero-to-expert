@@ -20,8 +20,8 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" #searchText
-        (keyup.enter)="searchHero(searchText.value)">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" (keyup.enter)="searchHero(searchText.value)"
+        #searchText>
       <button (click)="searchHero(searchText.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Search</button>
     </form>
   </div>
