@@ -25,8 +25,8 @@ export class HeroCardComponent implements OnInit {
    *
    */
   seeHero() {
-    // this._router.navigate(['/heroe', this.idx]);
-    this.selectedHero.emit(this.idx);
+    this._router.navigate(['/heroe', this.idx]);
+    // this.selectedHero.emit(this.idx);
   }
 
 }
