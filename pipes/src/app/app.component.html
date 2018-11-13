@@ -82,6 +82,21 @@
         <td>async</td>
         <td>{{ promiseValue | async }}</td>
       </tr>
+      <tr>
+        <td>{{ dateRecord }}</td>
+        <td>date</td>
+        <td>{{ dateRecord | date }}</td>
+      </tr>
+      <tr>
+        <td>{{ dateRecord }}</td>
+        <td>date:'medium'</td>
+        <td>{{ dateRecord | date:'medium' }}</td>
+      </tr>
+      <tr>
+        <td>{{ dateRecord }}</td>
+        <td>date:'MMMM - dd'</td>
+        <td>{{ dateRecord | date:'MMMM - dd' }}</td>
+      </tr>
     </tbody>
   </table>
 

@@ -30,4 +30,6 @@ export class AppComponent {
 
   });
 
+  dateRecord = new Date();
+
 }
