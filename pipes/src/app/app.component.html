@@ -52,6 +52,31 @@
         <td>percent:'2.2-2'</td>
         <td>{{ a | percent:'2.2-2' }}</td>
       </tr>
+      <tr>
+        <td>{{ salary }}</td>
+        <td>currency</td>
+        <td>{{ salary | currency }}</td>
+      </tr>
+      <tr>
+        <td>{{ salary }}</td>
+        <td>currency:'COP'</td>
+        <td>{{ salary | currency:'COP' }}</td>
+      </tr>
+      <tr>
+        <td>{{ salary }}</td>
+        <td>currency:'COP':'symbol-narrow'</td>
+        <td>{{ salary | currency:'COP':'symbol-narrow' }}</td>
+      </tr>
+      <tr>
+        <td>{{ salary }}</td>
+        <td>currency:'COP':'symbol-narrow':'4.0-0'</td>
+        <td>{{ salary | currency:'COP':'symbol-narrow':'4.0-0' }}</td>
+      </tr>
+      <tr>
+        <td>{{ salary }}</td>
+        <td>number:'.2-2' </td>
+        <td>{{ salary | number:'.2-2' }}</td>
+      </tr>
     </tbody>
   </table>
 
