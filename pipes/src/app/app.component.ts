@@ -12,4 +12,15 @@ export class AppComponent {
   PI = Math.PI;
   a = 0.234;
   salary = 536250;
+
+  hero = {
+    name: 'Logan',
+    pass: 'Wolverine',
+    age: 500,
+    address: {
+      street: 'first',
+      house: '203'
+    }
+  };
+
 }
