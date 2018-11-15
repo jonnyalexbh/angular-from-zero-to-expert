@@ -9,6 +9,7 @@ import { resolve } from 'q';
 export class AppComponent {
 
   name = 'Jonny Alexander';
+  name2 = 'jonny aleXander beRRio hurtado';
   numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   PI = Math.PI;
   a = 0.234;
