@@ -32,5 +32,6 @@ export class AppComponent {
   });
 
   dateRecord = new Date();
+  video = 'xKVBZV7wXsc';
 
 }

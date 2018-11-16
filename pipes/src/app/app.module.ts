@@ -6,12 +6,15 @@ import { CapitalizePipe } from './pipes/capitalize.pipe';
 
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
+import { DomsafePipe } from './pipes/domsafe.pipe';
+
 registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
     AppComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    DomsafePipe
   ],
   imports: [
     BrowserModule
