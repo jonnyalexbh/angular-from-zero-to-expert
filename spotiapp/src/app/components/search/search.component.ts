@@ -22,7 +22,7 @@ export class SearchComponent {
    */
   search(term: string) {
     this.spotify.getArtist(term).subscribe((data: any) => {
-      this.artists = data.artists.items;
+      this.artists = data;
     });
   }
 
