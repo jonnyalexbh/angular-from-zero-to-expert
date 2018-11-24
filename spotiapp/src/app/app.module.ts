@@ -18,6 +18,7 @@ import { ROUTES } from './app.routes';
 
 // pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { DomsafePipe } from './pipes/domsafe.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     ArtistComponent,
     NavbarComponent,
     NoimagePipe,
+    DomsafePipe,
     CardsComponent,
     LoadingComponent
   ],
