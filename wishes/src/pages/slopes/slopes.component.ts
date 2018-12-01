@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { WishesService } from "../../services/wishes.service";
 import { List } from "../../models";
+import { NavController } from "ionic-angular";
+import { AddPage } from "../add/add.component";
 
 @Component({
   selector: 'page-slopes',
@@ -8,12 +10,17 @@ import { List } from "../../models";
 })
 export class SlopesPage {
 
-  constructor(public wishesService: WishesService) {
+  constructor(public wishesService: WishesService,
+    private navCtrl: NavController) {
 
   }
 
   listSelected(list: List) {
     console.log(list);
+  }
+
+  addList() {
+    this.navCtrl.push(AddPage);
   }
 
 }

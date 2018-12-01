@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 // components
 import { SlopesPage } from '../pages/slopes/slopes.component';
 import { FinishedPage } from '../pages/finished/finished.component';
+import { AddPage } from '../pages/add/add.component';
 
 // services
 import { WishesService } from '../services/wishes.service';
@@ -21,6 +22,7 @@ import { WishesService } from '../services/wishes.service';
     TabsPage,
     SlopesPage,
     FinishedPage,
+    AddPage,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { WishesService } from '../services/wishes.service';
     TabsPage,
     SlopesPage,
     FinishedPage,
+    AddPage,
   ],
   providers: [
     StatusBar,
