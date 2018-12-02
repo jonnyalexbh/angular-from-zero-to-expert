@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { WishesService } from "../../services/wishes.service";
 import { List } from "../../models";
+import { NavParams } from "ionic-angular";
 
 @Component({
   selector: 'page-add',
@@ -8,8 +9,16 @@ import { List } from "../../models";
 })
 export class AddPage {
 
-  constructor(public wishesService: WishesService) {
+  list: List;
 
+  /**
+   * constructor
+   *
+   */
+  constructor(public wishesService: WishesService,
+    private navParams: NavParams) {
+    const title = this.navParams.get('title');
+    this.list = new List(title);
   }
 
 }
