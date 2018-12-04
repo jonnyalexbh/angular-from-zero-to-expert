@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { WishesService } from "../../services/wishes.service";
-import { List } from "../../models";
+import { List, ListItem } from "../../models";
 import { NavParams } from "ionic-angular";
 
 @Component({
@@ -10,6 +10,7 @@ import { NavParams } from "ionic-angular";
 export class AddPage {
 
   list: List;
+  nameItem: string = '';
 
   /**
    * constructor
@@ -19,6 +20,28 @@ export class AddPage {
     private navParams: NavParams) {
     const title = this.navParams.get('title');
     this.list = new List(title);
+  }
+
+  /**
+   * addItem
+   *
+   */
+  addItem() {
+    if (this.nameItem.length === 0) {
+      return;
+    }
+
+    const newItem = new ListItem(this.nameItem);
+    this.list.items.push(newItem);
+    this.nameItem = '';
+  }
+
+  /**
+   * addItem
+   *
+   */
+  updateTask(item: ListItem) {
+    item.completed = !item.completed;
   }
 
 }

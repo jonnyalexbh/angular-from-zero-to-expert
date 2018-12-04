@@ -14,15 +14,19 @@
 
     <ion-item>
       <ion-label floating>New item</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [(ngModel)]="nameItem" type="text" (keyup.enter)="addItem()"></ion-input>
     </ion-item>
 
   </ion-list>
 
-  <ion-list>
-    <button ion-item detail-none>
-      <ion-icon name="square-outline" item-start></ion-icon>
-      Save the world
+  <ion-list *ngIf="list.items.length> 0">
+    <ion-list-header>tasks to be done</ion-list-header>
+    <button ion-item detail-none class="animated fadeInDown"
+      (click)="updateTask(item)"
+      *ngFor="let item of list.items">
+      <ion-icon *ngIf="item.completed" name="checkbox-outline" item-start></ion-icon>
+      <ion-icon *ngIf="!item.completed" name="square-outline" item-start></ion-icon>
+      {{ item.description }}
     </button>
   </ion-list>
 
