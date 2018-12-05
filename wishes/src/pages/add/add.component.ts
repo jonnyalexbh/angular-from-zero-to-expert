@@ -44,4 +44,12 @@ export class AddPage {
     item.completed = !item.completed;
   }
 
+  /**
+   * delete
+   *
+   */
+  delete(idx: number) {
+    this.list.items.splice(idx, 1);
+  }
+
 }
