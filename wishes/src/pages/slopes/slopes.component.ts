@@ -25,7 +25,10 @@ export class SlopesPage {
    *
    */
   listSelected(list: List) {
-    console.log(list);
+    this.navCtrl.push(AddPage, {
+      title: list.title,
+      list: list
+    });
   }
 
   /**
