@@ -6,13 +6,48 @@ export class WishesService {
 
   lists: List[] = [];
 
+  /**
+   * constructor
+   *
+   */
   constructor() {
-    const list1 = new List('collect infinity stones');
-    const list2 = new List('heroes to beat');
+    this.loadStorage();
+    // const list1 = new List('collect infinity stones');
+    // const list2 = new List('heroes to beat');
 
-    this.lists.push(list1, list2);
-    console.log(this.lists);
+    // this.lists.push(list1, list2);
+    // console.log(this.lists);
 
+  }
+
+  /**
+   * addList
+   *
+   */
+  addList(list: List) {
+    this.lists.push(list);
+    this.saveStorage();
+  }
+
+  /**
+   * saveStorage
+   *
+   */
+  saveStorage() {
+    localStorage.setItem('data', JSON.stringify(this.lists));
+  }
+
+  /**
+   * loadStorage
+   *
+   */
+  loadStorage() {
+    if (localStorage.getItem('data')) {
+      this.lists = JSON.parse(localStorage.getItem('data'));
+    }
+    else {
+      this.lists = [];
+    }
   }
 
 }

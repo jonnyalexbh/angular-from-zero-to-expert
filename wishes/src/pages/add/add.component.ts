@@ -20,6 +20,8 @@ export class AddPage {
     private navParams: NavParams) {
     const title = this.navParams.get('title');
     this.list = new List(title);
+
+    this.wishesService.addList(this.list);
   }
 
   /**
