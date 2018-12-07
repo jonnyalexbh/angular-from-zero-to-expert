@@ -32,6 +32,14 @@ export class SlopesPage {
   }
 
   /**
+   * deleteList
+   *
+   */
+  deleteList(list: List) {
+    this.wishesService.deleteList(list);
+  }
+
+  /**
    * addList
    *
    */
