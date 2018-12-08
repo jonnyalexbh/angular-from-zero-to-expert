@@ -16,6 +16,9 @@ import { AddPage } from '../pages/add/add.component';
 // services
 import { WishesService } from '../services/wishes.service';
 
+// pipes
+import { FilterCompletedPipe } from '../pipes/filter-completed/filter-completed';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -23,6 +26,7 @@ import { WishesService } from '../services/wishes.service';
     SlopesPage,
     FinishedPage,
     AddPage,
+    FilterCompletedPipe,
   ],
   imports: [
     BrowserModule,

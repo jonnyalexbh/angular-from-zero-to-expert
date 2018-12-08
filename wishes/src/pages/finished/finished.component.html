@@ -10,7 +10,7 @@
 
   <ion-list>
     <button ion-item
-      *ngFor="let list of wishesService.lists"
+      *ngFor="let list of wishesService.lists | filterCompleted:true"
       (click)="listSelected(list)">
       {{ list.title }}
     </button>
