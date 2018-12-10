@@ -12,6 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SlopesPage } from '../pages/slopes/slopes.component';
 import { FinishedPage } from '../pages/finished/finished.component';
 import { AddPage } from '../pages/add/add.component';
+import { ListsComponent } from '../components/lists.component';
 
 // services
 import { WishesService } from '../services/wishes.service';
@@ -27,6 +28,7 @@ import { FilterCompletedPipe } from '../pipes/filter-completed/filter-completed'
     FinishedPage,
     AddPage,
     FilterCompletedPipe,
+    ListsComponent,
   ],
   imports: [
     BrowserModule,

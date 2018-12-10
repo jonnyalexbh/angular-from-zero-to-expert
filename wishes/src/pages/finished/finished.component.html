@@ -8,12 +8,6 @@
 
   <img src="../../assets/imgs/completados.jpg">
 
-  <ion-list>
-    <button ion-item
-      *ngFor="let list of wishesService.lists | filterCompleted:true"
-      (click)="listSelected(list)">
-      {{ list.title }}
-    </button>
-  </ion-list>
+  <app-lists [completed]="true"></app-lists>
 
 </ion-content>

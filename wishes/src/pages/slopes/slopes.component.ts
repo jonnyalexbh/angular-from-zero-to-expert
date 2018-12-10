@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { WishesService } from "../../services/wishes.service";
-import { List } from "../../models";
 import { NavController, AlertController } from "ionic-angular";
 import { AddPage } from "../add/add.component";
 
@@ -18,25 +17,6 @@ export class SlopesPage {
     private navCtrl: NavController,
     private alertCtrl: AlertController) {
 
-  }
-
-  /**
-   * listSelected
-   *
-   */
-  listSelected(list: List) {
-    this.navCtrl.push(AddPage, {
-      title: list.title,
-      list: list
-    });
-  }
-
-  /**
-   * deleteList
-   *
-   */
-  deleteList(list: List) {
-    this.wishesService.deleteList(list);
   }
 
   /**
